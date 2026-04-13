@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-client = genai.Client(api_key=os.getenv("GENAI_API_KEY"))
+client = genai.Client(api_key=st.secrets["GENAI_API_KEY"])
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
